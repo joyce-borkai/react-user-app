@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css';
-import UserItem from './component/joyce'
+import UsersName from './component/joyce'
 
 
    class App extends React.Component {
@@ -26,16 +26,16 @@ this.setState({
   });
      }
 
-       handlesubmit =(e) => {
+       handleSubmit =(e) => {
          e.preventDefault();
          const user = this.state
          let newUser = {name:user.name, email:user.email}
-         this.setstate({users:[...user.users, newUser]})
+         this.setState({users:[...user.users, newUser]})
 
          this.clear();
        }
           clear =() => {
-            this.setstate({
+            this.setState({
               name:"",
               email:""
             })
@@ -46,7 +46,7 @@ this.setState({
      return (
        <div className="App">
          <div className="particulers">
-           <form onsubmit={this.handleSubmit}>
+           <form onSubmit={this.handleSubmit}>
              <input
              type="text"
              name="name"
@@ -66,9 +66,9 @@ this.setState({
            </form>
          </div>
          <div className="list-of-users">
-           <h3 className="text">list of users</h3>
+           <h2 className="text">list of users</h2>
            {
-             users.map((user, i) => <UserItem key={i} {...user}/>)
+             users.map((user, i) => <UsersName key={i} {...user}/>)
            }
          </div>
        </div>

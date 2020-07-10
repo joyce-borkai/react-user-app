@@ -1,6 +1,6 @@
 import React from 'react';
 
-class UserItem extends  React.Component{
+class UsersName extends  React.Component{
 
     render() {
         const {name,email} = this.props
@@ -18,4 +18,4 @@ class UserItem extends  React.Component{
 
 
 
-export default UserItem;
+export default UsersName;
